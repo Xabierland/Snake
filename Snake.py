@@ -1,3 +1,10 @@
+# Script creado el 11/04/2020 por Xabier Gabiña ak.Xabierland
+# Mi Github: https://github.com/Xabierland
+# Mi Twitter: https://twitter.com/Xabierland
+# Mi Instagram: https://www.instagram.com/xabierland/
+
+#Basado en https://www.edureka.co/blog/snake-game-with-pygame/
+
 import pygame
 import time
 import random
