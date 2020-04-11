@@ -37,7 +37,7 @@ green=(0,255,0)
 clk = pygame.time.Clock()
 
 # Tipo de fuente
-font_style=pygame.font.SysFont("bahnschrift",25)
+font_style=pygame.font.SysFont("bahnschrift",15)
 score_font=pygame.font.SysFont("comicsansms",35)
 
 # La logica de la puntuacion
