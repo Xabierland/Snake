@@ -75,8 +75,8 @@ def gameLoop():
     Lenght_of_snake=1
 
     #Logica que genera los bloques de comida
-    foodx=round(random.randrange(0, display_w - snake_block)/10.0)*10.0
-    foody=round(random.randrange(0,display_h-snake_block)/10.0)*10.0
+    foodx=round(random.randrange(0, display_w - snake_block)/10)*10
+    foody=round(random.randrange(0,display_h-snake_block)/10)*10
 
     # Todo lo que ocurre durante el juego
     while not game_over:
@@ -150,8 +150,8 @@ def gameLoop():
 
         # Logica del comer
         if x1==foodx and y1==foody:
-            foodx=round(random.randrange(0, display_w - snake_block)/10.0)*10.0
-            foody=round(random.randrange(0,display_h-snake_block)/10.0)*10.0
+            foodx=round(random.randrange(0, display_w - snake_block)/10)*10
+            foody=round(random.randrange(0,display_h-snake_block)/10)*10
             Lenght_of_snake+=1
 
         # Velocidad del jugador
