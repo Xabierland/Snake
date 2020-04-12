@@ -89,6 +89,9 @@ def gameLoop():
             pygame.display.update()
             
             for event in pygame.event.get():
+                if event.type==pygame.QUIT:     # Cerrar el juego por boton
+                    game_over=True
+                    game_close=False
                 if event.type==pygame.KEYDOWN:  # Cerrar el juego
                     if event.key==pygame.K_q:
                         game_over=True
