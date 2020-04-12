@@ -6,7 +6,7 @@ Script creado el 11/04/2020 por Xabier Gabiña ak.Xabierland
 - Mi Instagram: https://www.instagram.com/xabierland/
 
 # WARMING
-- PARA CREAR EL .EXE ES NECESARIO TENER INSTALADO PYTHON https://www.python.org/downloads/
+- PARA HACER CUALQUIER COSA PRIMERO ES NECESARIO TENER INSTALADO PYTHON https://www.python.org/downloads/
 
 # Requisitos
 Instalar el paquete pygame
