@@ -15,6 +15,6 @@ Para instalar la libreria habre la cmd y ejecuta este comando
 El comando para crear el achivo .exe:
 - $ pyinstaller yourprogram.py
 
-Para mas ayuda sobre la libreria de PyInstaller visita la pagina oficial https://www.pyinstaller.org/
+Para mas ayuda sobre la libreria de PyInstaller visita la pagina oficial https://www.pyinstaller.org/ 
 
 - NOTA: PARA CREAR EL .EXE ES NECESARIO TENER INSTALADO PYTHON https://www.python.org/downloads/
