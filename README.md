@@ -5,6 +5,8 @@ Script creado el 11/04/2020 por Xabier Gabiña ak.Xabierland
 - Mi Twitter: https://twitter.com/Xabierland
 - Mi Instagram: https://www.instagram.com/xabierland/
 
+- NOTA: PARA CREAR EL .EXE ES NECESARIO TENER INSTALADO PYTHON https://www.python.org/downloads/
+
 # Requisitos
 Instalar el paquete pygame
 - $ pip install pygame
@@ -24,5 +26,3 @@ El comando para crear el achivo .exe:
 - $ pyinstaller yourprogram.py
 
 Para mas ayuda sobre la libreria de PyInstaller visita la pagina oficial https://www.pyinstaller.org/ 
-
-- NOTA: PARA CREAR EL .EXE ES NECESARIO TENER INSTALADO PYTHON https://www.python.org/downloads/
