@@ -6,8 +6,10 @@ Script creado el 11/04/2020 por Xabier Gabiña ak.Xabierland
 - Mi Instagram: https://www.instagram.com/xabierland/
 
 ==================================================================================
-He usado la libreria de PyInstaller para crear el ejecutable del juego.
-Si se hace cualquier cambio al juego base sera necesario volver a crear el ejecutable mediante el comando
+Para crear el ejecutable del juego recomiendo usar la biblioteca de PyInstaller.
+Recuerda que cada cambio que realices al juego no se actualizara en el ejecutable y tendras que volver a correr el PyInstaller.
 
+El comando es:
 $ pyinstaller yourprogram.py
+
 Para mas ayuda sobre la libreria de PyInstaller visita la pagina oficial https://www.pyinstaller.org/
