@@ -5,6 +5,10 @@ Script creado el 11/04/2020 por Xabier Gabiña ak.Xabierland
 - Mi Twitter: https://twitter.com/Xabierland
 - Mi Instagram: https://www.instagram.com/xabierland/
 
+# Requisitos
+Instalar el paquete pygame
+- $ pip install pygame
+
 # Como crear el ejecutable
 Para crear el ejecutable del juego recomiendo usar la biblioteca de PyInstaller.
 - Recuerda que cada cambio que realices al juego tras la creacion del ejecutable no se actualizara en el mismo y tendras que volver a correr el PyInstaller.
