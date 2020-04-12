@@ -7,7 +7,7 @@ Script creado el 11/04/2020 por Xabier Gabiña ak.Xabierland
 
 # Como crear el ejecutable
 Para crear el ejecutable del juego recomiendo usar la biblioteca de PyInstaller.
-Recuerda que cada cambio que realices al juego no se actualizara en el ejecutable y tendras que volver a correr el PyInstaller.
+- Recuerda que cada cambio que realices al juego tras la creacion del ejecutable no se actualizara en el mismo y tendras que volver a correr el PyInstaller.
 
 Para instalar la libreria habre la cmd y ejecuta este comando
 - $ pip install PyInstaller
