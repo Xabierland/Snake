@@ -8,6 +8,7 @@
 import pygame
 import time
 import random
+import os
 
 # Inicializacion del juego
 pygame.init()
@@ -32,6 +33,7 @@ blue=(50,153,213)
 red=(255,0,0)
 yellow=(255,255,102)
 green=(0,255,0)
+dark_green=(51,102,0)
 
 # Reloj interno del juego
 clk = pygame.time.Clock()
@@ -74,6 +76,12 @@ def gameLoop():
     snake_List=[]
     Lenght_of_snake=1
 
+    # Velocidad del juegador
+    snake_speed=15  
+
+    # Inicializa las variables CHEAT CODE
+    CHEAT_INV=False
+
     #Logica que genera los bloques de comida
     foodx=round(random.randrange(0, display_w - snake_block)/10)*10
     foody=round(random.randrange(0,display_h-snake_block)/10)*10
@@ -83,7 +91,7 @@ def gameLoop():
 
         # Logica del cierre del juego
         while game_close == True:
-            display.fill(blue)
+            display.fill(dark_green)
             message("¡Has perdido! Presiona Q para salir o R para jugar de nuevo", red)
             your_score(Lenght_of_snake-1)
             pygame.display.update()
@@ -120,19 +128,39 @@ def gameLoop():
                     x1_change = 0
                     y1_change = 10
 
+                # Cheat CODE
+                if event.key == pygame.K_F7:    # INVIERTE EL JUEGO
+                    CHEAT_INV=True
+                if event.key == pygame.K_F8:    # DESINVIERTE EL JUEGO
+                    CHEAT_INV=False
+                if event.key == pygame.K_F9:    # MAS VELOCIDAD
+                    snake_speed+=10
+                if event.key == pygame.K_F10:   # MENOS VELOCIDAD
+                    snake_speed-=10
+                if event.key == pygame.K_F11:   # AUMENTAR PUNTUACION
+                    Lenght_of_snake+=1
+                if event.key == pygame.K_F12:   # DIMINUIR PUNTUACION
+                    Lenght_of_snake-=1
+
         # Condicion de derrota - Salirse del mapa
         if x1>=display_w or x1<0 or y1>=display_h or y1<0:
             game_close=True
+            pygame.mixer.music.load('util\dead.mp3')
+            pygame.mixer.music.play()
 
         # Actualizacion del movimiento del juegador
-        x1 += x1_change
-        y1 += y1_change
+        if not CHEAT_INV:
+            x1 += x1_change
+            y1 += y1_change
+        else:
+            x1 -= x1_change
+            y1 -= y1_change
         
         # Rellena el tablero de juego
-        display.fill(blue)
+        display.fill(dark_green)
 
         # Dibuja la comida
-        pygame.draw.rect(display, green, [foodx, foody, snake_block, snake_block])
+        pygame.draw.rect(display, white, [foodx, foody, snake_block, snake_block])
 
         # Dibuja al jugador
         snake_Head=[]
@@ -156,6 +184,11 @@ def gameLoop():
             foodx=round(random.randrange(0, display_w - snake_block)/10)*10
             foody=round(random.randrange(0,display_h-snake_block)/10)*10
             Lenght_of_snake+=1
+            # Logica del sonido de comer
+            pygame.mixer.music.load('util\eat.mp3')
+            pygame.mixer.music.play()
+            # Aumentar Velocidad al comer
+            snake_speed+=0.1
 
         # Velocidad del jugador
         clk.tick(snake_speed)
@@ -165,3 +198,5 @@ def gameLoop():
     quit()
 
 gameLoop()
+
+# VERSION 1.3 Ult.edicion 14/04/2020
